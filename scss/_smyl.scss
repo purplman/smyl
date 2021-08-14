@@ -1,0 +1,22 @@
+.hero {
+  @include flex(space-between, center);
+  margin-top: 15rem;
+  font-size: 1.2rem;
+  font-weight: 500;
+
+  &__center {
+    max-width: 50%;
+
+    img {
+      position: relative;
+      z-index: -3;
+    }
+  }
+
+  &__left {
+    transform: rotate(-90deg) translateY(-60px);
+  }
+  &__right {
+    transform: rotate(-90deg) translateY(70px);
+  }
+}

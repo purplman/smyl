@@ -1,0 +1,56 @@
+.projects {
+  display: flex;
+  height: 100vh;
+
+  &__left {
+    width: 100%;
+    position: relative;
+    background: #f7f7f7;
+
+    &-slider {
+      display: flex;
+      flex-wrap: nowrap;
+      max-width: 600px;
+      position: relative;
+
+      &-wrapper {
+        position: absolute;
+        overflow: hidden;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      &-control {
+        margin-top: 1rem;
+        @include flex(space-between, center);
+      }
+    }
+
+    &-slide {
+      min-width: 600px;
+    }
+  }
+
+  &__right {
+    width: 100%;
+
+    &-slider {
+      display: flex;
+      flex-wrap: nowrap;
+      width: 100%;
+      position: relative;
+      height: 100%;
+
+      &-wrapper {
+        overflow: hidden;
+        height: 100%;
+      }
+    }
+
+    &-slide {
+      min-width: 100%;
+      background-size: cover;
+    }
+  }
+}

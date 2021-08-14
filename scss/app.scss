@@ -1,0 +1,48 @@
+@import "colors";
+@import "type";
+@import "mixins";
+@import "reset";
+@import "spacings";
+@import "buttons";
+@import "header";
+@import "smyl";
+@import "slider";
+
+.container {
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+section {
+  position: relative;
+}
+
+.intro {
+  max-width: 75%;
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 3rem;
+}
+
+.cursor {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 2px solid #000;
+  transform: translate(-50%, -50%);
+  transition: all 0.2s ease;
+  transition-property: background-color, transform;
+  transform-origin: 100% 100%;
+  pointer-events: none;
+  z-index: 2;
+  padding: 1rem;
+
+  &--over {
+    backdrop-filter: invert(100%);
+    transform: scale(2);
+  }
+}
