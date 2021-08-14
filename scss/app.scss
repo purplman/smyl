@@ -46,3 +46,15 @@ section {
     transform: scale(2);
   }
 }
+
+@media (max-width: 568px) {
+  .intro {
+    max-width: 100%;
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
+  .container {
+    padding: 0 1rem;
+  }
+}

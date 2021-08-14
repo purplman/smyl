@@ -33,10 +33,16 @@ body {
 
 html {
   cursor: none;
+  scroll-behavior: smooth;
 }
 
 a {
   text-decoration: none;
+  color: #000;
+}
+
+a:visited {
+  color: #000;
 }
 
 ul {
@@ -45,6 +51,28 @@ ul {
 
 img {
   width: 100%;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #fff;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #f1f1f1;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #000;
 }
 
 .m-0 {
@@ -504,6 +532,11 @@ header nav {
           align-items: center;
 }
 
+header .hamburger,
+header .mobile-menu {
+  display: none;
+}
+
 header .menu ul {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -538,23 +571,158 @@ header .menu li:not(:last-child) {
   margin-right: 2rem;
 }
 
+@media (max-width: 568px) {
+  html {
+    cursor: default;
+  }
+  .cursor {
+    display: none;
+  }
+  header {
+    padding: 1rem 0;
+  }
+  header .menu {
+    display: none;
+  }
+  header .mobile-menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100vh;
+    z-index: 2;
+    background: #fff;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    font-size: 2rem;
+  }
+  header .mobile-menu__closer {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    width: 30px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 30px;
+  }
+  header .mobile-menu__closer span {
+    width: 100%;
+    background: #000;
+    -webkit-transform: rotate(45deg) translate(-50%, -50%);
+            transform: rotate(45deg) translate(-50%, -50%);
+    -webkit-transform-origin: 0 0;
+            transform-origin: 0 0;
+    height: 2px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+  }
+  header .mobile-menu__closer span::after {
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    content: "";
+    -webkit-transform: rotate(-90deg) translate(-50%, -50%);
+            transform: rotate(-90deg) translate(-50%, -50%);
+    -webkit-transform-origin: 0 0;
+            transform-origin: 0 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+  }
+  header .mobile-menu--active {
+    left: 0;
+  }
+  header .mobile-menu ul {
+    width: 100%;
+  }
+  header .mobile-menu li {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  header .mobile-menu li:not(:last-child) {
+    padding-bottom: 1rem;
+  }
+  header .hamburger {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 30px;
+    height: 30px;
+    position: relative;
+  }
+  header .hamburger span {
+    height: 2px;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    background: #000;
+  }
+  header .hamburger span::after, header .hamburger span::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    position: absolute;
+    left: 0;
+  }
+  header .hamburger span::after {
+    top: 6px;
+  }
+  header .hamburger span::before {
+    top: -6px;
+  }
+}
+
 .hero {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   margin-top: 15rem;
   font-size: 1.2rem;
   font-weight: 500;
+  position: relative;
+  text-align: center;
+}
+
+.hero__left h1 {
+  font-weight: 500;
+}
+
+.hero__left h3 {
+  font-weight: 300;
 }
 
 .hero__center {
   max-width: 50%;
+  margin-bottom: 3rem;
 }
 
 .hero__center img {
@@ -562,14 +730,16 @@ header .menu li:not(:last-child) {
   z-index: -3;
 }
 
-.hero__left {
-  -webkit-transform: rotate(-90deg) translateY(-60px);
-          transform: rotate(-90deg) translateY(-60px);
-}
-
-.hero__right {
-  -webkit-transform: rotate(-90deg) translateY(70px);
-          transform: rotate(-90deg) translateY(70px);
+@media (max-width: 568px) {
+  .hero {
+    margin-top: 5rem;
+  }
+  .hero__left h1 {
+    font-size: 2rem;
+  }
+  .hero__left h3 {
+    font-size: 1rem;
+  }
 }
 
 .projects {
@@ -691,4 +861,15 @@ section {
           backdrop-filter: invert(100%);
   -webkit-transform: scale(2);
           transform: scale(2);
+}
+
+@media (max-width: 568px) {
+  .intro {
+    max-width: 100%;
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+  .container {
+    padding: 0 1rem;
+  }
 }

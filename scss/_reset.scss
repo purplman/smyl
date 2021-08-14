@@ -8,10 +8,16 @@
 
 html {
   cursor: none;
+  scroll-behavior: smooth;
 }
 
 a {
   text-decoration: none;
+  color: #000;
+
+  &:visited {
+    color: #000;
+  }
 }
 
 ul {
@@ -20,4 +26,25 @@ ul {
 
 img {
   width: 100%;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #fff;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #f1f1f1;
+  transition: 0.3s;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #000;
 }

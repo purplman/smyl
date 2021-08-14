@@ -11,6 +11,25 @@
     <div class="cursor"></div>
     <div class="wrapper">
       <header>
+        <div class="mobile-menu">
+          <div class="mobile-menu__closer">
+            <span></span>
+          </div>
+          <ul>
+            <li>
+              <a href="">Home</a>
+            </li>
+            <li>
+              <a href="#projects">Projects</a>
+            </li>
+            <li>
+              <a href="">Contact</a>
+            </li>
+            <li>
+              <a href="">Resume</a>
+            </li>
+          </ul>
+        </div>
         <div class="container">
           <nav>
             <div class="brand">
@@ -18,13 +37,16 @@
                 <img src="image/logo.jpg" alt="" />
               </a>
             </div>
+            <div class="hamburger">
+              <span></span>
+            </div>
             <div class="menu">
               <ul>
                 <li>
                   <a href="">Home</a>
                 </li>
                 <li>
-                  <a href="">Projects</a>
+                  <a href="#projects">Projects</a>
                 </li>
                 <li>
                   <a href="">Contact</a>
@@ -36,11 +58,13 @@
             </div>
           </nav>
           <div class="hero">
-            <div class="hero__left">Ismayil Mirzayev</div>
             <div class="hero__center">
               <img src="image/smyl.png" alt="" />
             </div>
-            <div class="hero__right">Web Developer</div>
+            <div class="hero__left">
+              <h1>Ismayil Mirzayev</h1>
+              <h3>Web Developer</h3>
+            </div>
           </div>
         </div>
       </header>
@@ -57,11 +81,11 @@
         </section>
       </div>
 
-      <section id="projects">
+      <section>
         <div class="container">
           <h1 class="title">Projects</h1>
         </div>
-        <div class="projects">
+        <div id="projects" class="projects">
           <div class="projects__left">
             <div class="projects__left-slider-wrapper">
               <div class="projects__left-slider">

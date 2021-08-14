@@ -70,4 +70,21 @@ $(function () {
       $(".cursor").removeClass("cursor--over");
     }
   );
+
+  $(".projects__right-slide").hover(
+    () => {
+      $(".cursor").addClass("cursor--over");
+    },
+    () => {
+      $(".cursor").removeClass("cursor--over");
+    }
+  );
+
+  $(".hamburger").on("click", () => {
+    $(".mobile-menu").addClass("mobile-menu--active");
+  });
+
+  $(".mobile-menu__closer").on("click", () => {
+    $(".mobile-menu").removeClass("mobile-menu--active");
+  });
 });
