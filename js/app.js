@@ -87,4 +87,13 @@ $(function () {
   $(".mobile-menu__closer").on("click", () => {
     $(".mobile-menu").removeClass("mobile-menu--active");
   });
+
+  $(".projects__left-slide").hover(
+    () => {
+      $(".cursor").addClass("cursor--visit");
+    },
+    () => {
+      $(".cursor").removeClass("cursor--visit");
+    }
+  );
 });
