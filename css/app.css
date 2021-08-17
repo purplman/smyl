@@ -23,6 +23,12 @@ body {
   position: absolute;
 }
 
+@media (max-width: 568px) {
+  .title {
+    font-size: 2rem;
+  }
+}
+
 *,
 *::before,
 *::after {

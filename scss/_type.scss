@@ -21,4 +21,8 @@ body {
     left: 0;
     position: absolute;
   }
+
+  @media (max-width: 568px) {
+    font-size: 2rem;
+  }
 }
