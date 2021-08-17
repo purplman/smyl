@@ -6,7 +6,6 @@ body {
 
 .title {
   margin: 5rem 0;
-  font-size: 3rem;
   display: inline-block;
   position: relative;
   font-weight: 600;
@@ -25,4 +24,9 @@ body {
   @media (max-width: 568px) {
     font-size: 2rem;
   }
+}
+
+h1 {
+  font-size: 5rem;
+  font-weight: 600;
 }
