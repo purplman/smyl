@@ -9,11 +9,13 @@
 html {
   cursor: none;
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 a {
   text-decoration: none;
   color: #000;
+  cursor: none;
 
   &:visited {
     color: #000;

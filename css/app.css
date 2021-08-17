@@ -35,11 +35,13 @@ body {
 html {
   cursor: none;
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 a {
   text-decoration: none;
   color: #000;
+  cursor: none;
 }
 
 a:visited {
@@ -595,7 +597,7 @@ header .menu li:not(:last-child) {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: -100%;
     width: 100%;
@@ -706,7 +708,7 @@ header .menu li:not(:last-child) {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-top: 15rem;
+  margin-top: 10rem;
   font-size: 1.2rem;
   font-weight: 500;
   position: relative;
@@ -724,16 +726,47 @@ header .menu li:not(:last-child) {
 .hero__center {
   max-width: 50%;
   margin-bottom: 3rem;
+  position: relative;
 }
 
 .hero__center img {
   position: relative;
-  z-index: -3;
+}
+
+.hero__bg-rectangle {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 100%;
+  height: 50px;
+  background: #f1f1f1;
+  z-index: -1;
+}
+
+.hero__bg-rectangle::before, .hero__bg-rectangle::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  width: 100%;
+  height: 50px;
+  left: 0;
+  background-color: inherit;
+}
+
+.hero__bg-rectangle::before {
+  top: -100px;
+}
+
+.hero__bg-rectangle::after {
+  top: 100px;
 }
 
 @media (max-width: 568px) {
   .hero {
-    margin-top: 5rem;
+    margin-top: 10rem;
   }
   .hero__left h1 {
     font-size: 2rem;
@@ -748,6 +781,12 @@ header .menu li:not(:last-child) {
   display: -ms-flexbox;
   display: flex;
   height: 100vh;
+}
+
+@media (max-width: 568px) {
+  .projects {
+    height: 50vh;
+  }
 }
 
 .projects a {
@@ -768,6 +807,12 @@ header .menu li:not(:last-child) {
       flex-wrap: nowrap;
   max-width: 600px;
   position: relative;
+}
+
+@media (max-width: 568px) {
+  .projects__left-slider {
+    max-width: 300px;
+  }
 }
 
 .projects__left-slider-wrapper {
@@ -796,8 +841,20 @@ header .menu li:not(:last-child) {
   min-width: 600px;
 }
 
+@media (max-width: 568px) {
+  .projects__left-slide {
+    min-width: 300px;
+  }
+}
+
 .projects__right {
   width: 100%;
+}
+
+@media (max-width: 568px) {
+  .projects__right {
+    display: none;
+  }
 }
 
 .projects__right-slider {

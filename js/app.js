@@ -5,13 +5,15 @@ $(function () {
 
   let l_width = $(".projects__right-slide").width();
 
+  let m_width = parseInt($(".projects__left-slider").css("max-width"));
+
   // slider buttons
   var next = $(".next");
   var prev = $(".prev");
 
   prev.hide();
 
-  let left_max = $(".projects__left-slide").length * 600;
+  let left_max = $(".projects__left-slide").length * m_width;
   let right_max = $(".projects__right-slide").length * l_width;
 
   let left = 0;
@@ -30,16 +32,16 @@ $(function () {
   next.on("click", function (e) {
     e.preventDefault();
     prev.fadeIn();
-    left = left - 600;
+    left = left - m_width;
     r_left = r_left - l_width;
-    if (Math.abs(left) == left_max - 600) next.hide();
+    if (Math.abs(left) == left_max - m_width) next.hide();
     swipe(left, r_left);
   });
 
   prev.on("click", function (e) {
     e.preventDefault();
     next.fadeIn();
-    left = left + 600;
+    left = left + m_width;
     r_left = r_left + l_width;
 
     if (left >= 0) prev.hide();
@@ -82,6 +84,10 @@ $(function () {
 
   $(".hamburger").on("click", () => {
     $(".mobile-menu").addClass("mobile-menu--active");
+  });
+
+  $(".mobile-menu a").on("click", () => {
+    $(".mobile-menu").removeClass("mobile-menu--active");
   });
 
   $(".mobile-menu__closer").on("click", () => {
