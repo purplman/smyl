@@ -1,6 +1,9 @@
 .projects {
   display: flex;
   height: 100vh;
+  position: relative;
+  margin-top: 10rem;
+  justify-content: center;
 
   @media (max-width: 568px) {
     height: 50vh;
@@ -36,6 +39,23 @@
       &-control {
         margin-top: 1rem;
         @include flex(space-between, center);
+
+        div {
+          width: 100px;
+
+          &:nth-child(2) {
+            text-align: center;
+          }
+
+          a {
+            display: block;
+            width: 100%;
+          }
+
+          .next {
+            text-align: right;
+          }
+        }
       }
     }
 

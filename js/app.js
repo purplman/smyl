@@ -7,6 +7,10 @@ $(function () {
 
   let m_width = parseInt($(".projects__left-slider").css("max-width"));
 
+  let total_project_count = $(".projects__right-slide").length;
+
+  $(".total-project-count").html(total_project_count);
+
   // slider buttons
   var next = $(".next");
   var prev = $(".prev");
@@ -36,6 +40,8 @@ $(function () {
     r_left = r_left - l_width;
     if (Math.abs(left) == left_max - m_width) next.hide();
     swipe(left, r_left);
+
+    $(".current-project").html(parseInt($(".current-project").html()) + 1);
   });
 
   prev.on("click", function (e) {
@@ -46,6 +52,8 @@ $(function () {
 
     if (left >= 0) prev.hide();
     swipe(left, r_left);
+
+    $(".current-project").html(parseInt($(".current-project").html()) - 1);
   });
 
   $(window).on("mousemove", (e) => {

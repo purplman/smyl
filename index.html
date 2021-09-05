@@ -4,8 +4,61 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="index, follow" />
+    <meta name="distribution" content="global" />
+    <!-- Twitter -->
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:creator" content="@esport_az" />
+    <meta name="twitter:url" content="http://symlmrz.com" />
+    <!-- <meta
+      name="twitter:image"
+      content="https://esport.az/dist/images/site/favicon.png"
+    /> -->
+    <meta name="twitter:site" content="smylmrz.com" />
+    <meta name="twitter:title" content="smylmrz - web developer" />
+
+    <!-- Description -->
+
+    <meta name="twitter:description" content="test" />
+    <meta itemprop="description" content="test" />
+    <meta name="description" content="test" />
+    <meta property="og:description" content="test" />
+
+    <!--Keywords-->
+
+    <meta name="keywords" content="test" />
+
+    <!--Open Graph-->
+    <!-- <meta
+      property="og:image"
+      content="https://esport.az/dist/images/site/favicon.png"
+    /> -->
+    <meta property="og:title" content="smylmrz - web developer" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="http://smylmrz.com" />
+
+    <link rel="canonical" href="http://smylmrz.com" />
+
+    <!-- Favicon -->
+
+    <!-- <link
+      rel="shortcut icon"
+      href="https://esport.az/dist/images/site/favicon.png"
+      type="image/x-icon"
+    />
+    <link
+      rel="icon"
+      href="https://esport.az/dist/images/site/favicon.png"
+      type="image/x-icon"
+    />
+    <link
+      rel="apple-touch-icon"
+      href="https://esport.az/dist/images/site/favicon.png"
+    /> -->
+
     <title>smylmrz - web developer</title>
-    <link rel="stylesheet" href="css/app.css?v=1.1" />
+    <link rel="stylesheet" href="css/app.css?v=1.2" />
   </head>
   <body>
     <div class="cursor"></div>
@@ -23,7 +76,7 @@
               <a href="#projects">Projects</a>
             </li>
             <li>
-              <a href="" disabled>Contact</a>
+              <a href="#contact">Contact</a>
             </li>
             <li>
               <a href="" disabled>Resume</a>
@@ -49,7 +102,7 @@
                   <a href="#projects">Projects</a>
                 </li>
                 <li>
-                  <a href="" disabled>Contact</a>
+                  <a href="#contact">Contact</a>
                 </li>
                 <li>
                   <a href="" disabled>Resume</a>
@@ -83,10 +136,8 @@
       </div>
 
       <section>
-        <div class="container">
-          <h1 class="title">Projects.</h1>
-        </div>
         <div id="projects" class="projects">
+          <h1 class="title floating__title">Projects.</h1>
           <div class="projects__left">
             <div class="projects__left-slider-wrapper">
               <div class="projects__left-slider">
@@ -104,10 +155,26 @@
                 >
                   <img src="image/projects/gymaz-logo.JPG" alt="" />
                 </a>
+                <a
+                  href="https://timsport.az"
+                  target="_blank"
+                  class="projects__left-slide"
+                >
+                  <img src="image/projects/timsport-logo.JPG" alt="" />
+                </a>
               </div>
               <div class="projects__left-slider-control">
-                <a class="prev slider__btn" href="">Prev</a>
-                <a class="next slider__btn" href="">Next</a>
+                <div>
+                  <a class="prev slider__btn" href="">Prev</a>
+                </div>
+                <div>
+                  <span class="current-project">1</span>
+                  /
+                  <span class="total-project-count">4</span>
+                </div>
+                <div>
+                  <a class="next slider__btn" href="">Next</a>
+                </div>
               </div>
             </div>
           </div>
@@ -126,13 +193,19 @@
                     background-image: url('image/projects/gymaz-screenshot.png');
                   "
                 ></div>
+                <div
+                  class="projects__right-slide"
+                  style="
+                    background-image: url('image/projects/timsport-screenshot.png');
+                  "
+                ></div>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <footer class="footer">
+      <footer class="footer" id="contact">
         <div class="container">
           <h1>Shoot me a message.</h1>
           <h1>I know you want to.</h1>
@@ -150,9 +223,6 @@
                     <a href="">Instagram</a>
                   </li>
                   <li>
-                    <a href="tel:994773293345">+994773293345</a>
-                  </li>
-                  <li>
                     <a href="mailto:smylmrz@gmail.com">smylmrz@gmail.com</a>
                   </li>
                 </ul>
@@ -164,5 +234,5 @@
     </div>
   </body>
   <script src="js/jquery.js"></script>
-  <script src="js/app.js?v=1.0"></script>
+  <script src="js/app.js?v=1.1"></script>
 </html>

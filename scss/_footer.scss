@@ -36,3 +36,14 @@
     flex-direction: column;
   }
 }
+
+@media (max-width: 568px) {
+  .footer {
+    margin-top: 5rem;
+    padding-bottom: 5rem;
+
+    h1 {
+      font-size: 2rem;
+    }
+  }
+}
