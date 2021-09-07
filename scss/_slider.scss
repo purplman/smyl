@@ -41,19 +41,9 @@
         @include flex(space-between, center);
 
         div {
-          width: 100px;
-
-          &:nth-child(2) {
-            text-align: center;
-          }
-
           a {
             display: block;
             width: 100%;
-          }
-
-          .next {
-            text-align: right;
           }
         }
       }
