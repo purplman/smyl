@@ -66,11 +66,31 @@ section {
   }
 }
 
+.blck {
+  position: fixed;
+  background: #000;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  @include flex(center, center);
+
+  img {
+    position: relative;
+    max-width: 300px;
+  }
+}
+
 @media (max-width: 568px) {
   .intro {
     max-width: 100%;
     font-size: 1.5rem;
     line-height: 2rem;
+  }
+
+  .blck img {
+    max-width: 150px;
   }
 
   .container {

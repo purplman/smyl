@@ -1,15 +1,26 @@
 $(function () {
   // clubs slider
-  var left_slider = $(".projects__left-slider");
-  var right_slider = $(".projects__right-slider");
+  const left_slider = $(".projects__left-slider");
+  const right_slider = $(".projects__right-slider");
 
   let l_width = $(".projects__right-slide").width();
 
   let m_width = parseInt($(".projects__left-slider").css("max-width"));
 
+  $(".blck img")
+    .delay(1000)
+    .animate(
+      {
+        top: -100 + "%",
+      },
+      () => {
+        $(".blck").fadeOut(500);
+      }
+    );
+
   // slider buttons
-  var next = $(".next");
-  var prev = $(".prev");
+  const next = $(".next");
+  const prev = $(".prev");
 
   prev.hide();
 

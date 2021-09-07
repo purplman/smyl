@@ -856,21 +856,9 @@ header .menu li:not(:last-child) {
           align-items: center;
 }
 
-.projects__left-slider-control div {
-  width: 100px;
-}
-
-.projects__left-slider-control div:nth-child(2) {
-  text-align: center;
-}
-
 .projects__left-slider-control div a {
   display: block;
   width: 100%;
-}
-
-.projects__left-slider-control div .next {
-  text-align: right;
 }
 
 .projects__left-slide {
@@ -1041,11 +1029,38 @@ section {
   padding: 1rem;
 }
 
+.blck {
+  position: fixed;
+  background: #000;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.blck img {
+  position: relative;
+  max-width: 300px;
+}
+
 @media (max-width: 568px) {
   .intro {
     max-width: 100%;
     font-size: 1.5rem;
     line-height: 2rem;
+  }
+  .blck img {
+    max-width: 150px;
   }
   .container {
     padding: 0 1rem;
