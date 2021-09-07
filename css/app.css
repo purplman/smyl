@@ -1,4 +1,21 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
+@-webkit-keyframes slide-up {
+  0% {
+    top: 0;
+  }
+  100% {
+    top: -100%;
+  }
+}
+@keyframes slide-up {
+  0% {
+    top: 0;
+  }
+  100% {
+    top: -100%;
+  }
+}
+
 body {
   font-family: "Poppins", sans-serif;
 }
@@ -955,6 +972,10 @@ header .menu li:not(:last-child) {
   }
 }
 
+.wrapper {
+  display: none;
+}
+
 .container {
   max-width: 1440px;
   margin-left: auto;
@@ -1046,11 +1067,24 @@ section {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  color: #fff;
 }
 
-.blck img {
+.blck h1 {
+  background: #000;
   position: relative;
-  max-width: 300px;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+  -webkit-animation-name: slide-up;
+          animation-name: slide-up;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
 }
 
 @media (max-width: 568px) {
@@ -1058,9 +1092,6 @@ section {
     max-width: 100%;
     font-size: 1.5rem;
     line-height: 2rem;
-  }
-  .blck img {
-    max-width: 150px;
   }
   .container {
     padding: 0 1rem;

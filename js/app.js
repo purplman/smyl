@@ -7,16 +7,11 @@ $(function () {
 
   let m_width = parseInt($(".projects__left-slider").css("max-width"));
 
-  $(".blck img")
-    .delay(1000)
-    .animate(
-      {
-        top: -100 + "%",
-      },
-      () => {
-        $(".blck").fadeOut(500);
-      }
-    );
+  $(".blck")
+    .delay(1500)
+    .fadeOut(() => {
+      $(".wrapper").fadeIn();
+    });
 
   // slider buttons
   const next = $(".next");
