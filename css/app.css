@@ -40,6 +40,12 @@ body {
   margin-right: auto;
 }
 
+@media (max-width: 1400px) {
+  .floating__title {
+    max-width: 1200px;
+  }
+}
+
 h1 {
   font-size: 5rem;
   font-weight: 600;
@@ -543,7 +549,7 @@ img {
 
 header {
   min-height: 100vh;
-  padding: 5rem 0;
+  padding: 3rem 0;
 }
 
 header a {
@@ -845,6 +851,12 @@ header .menu li:not(:last-child) {
   position: relative;
 }
 
+@media (max-width: 1400px) {
+  .projects__left-slider {
+    max-width: 350px;
+  }
+}
+
 @media (max-width: 568px) {
   .projects__left-slider {
     max-width: 300px;
@@ -880,6 +892,12 @@ header .menu li:not(:last-child) {
 
 .projects__left-slide {
   min-width: 600px;
+}
+
+@media (max-width: 1400px) {
+  .projects__left-slide {
+    min-width: 350px;
+  }
 }
 
 @media (max-width: 568px) {
@@ -973,7 +991,7 @@ header .menu li:not(:last-child) {
 }
 
 .wrapper {
-  display: none;
+  opacity: 0;
 }
 
 .container {
@@ -982,12 +1000,19 @@ header .menu li:not(:last-child) {
   margin-right: auto;
 }
 
+@media (max-width: 1400px) {
+  .container {
+    max-width: 1200px;
+  }
+}
+
 section {
   position: relative;
 }
 
 .intro {
   max-width: 75%;
+  margin: auto;
   font-size: 2rem;
   font-weight: 500;
   line-height: 3rem;

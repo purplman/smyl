@@ -11,13 +11,17 @@
 @import "footer";
 
 .wrapper {
-  display: none;
+  opacity: 0;
 }
 
 .container {
   max-width: 1440px;
   margin-left: auto;
   margin-right: auto;
+
+  @media (max-width: 1400px) {
+    max-width: 1200px;
+  }
 }
 
 section {
@@ -26,6 +30,7 @@ section {
 
 .intro {
   max-width: 75%;
+  margin: auto;
   font-size: 2rem;
   font-weight: 500;
   line-height: 3rem;

@@ -24,6 +24,10 @@
       max-width: 600px;
       position: relative;
 
+      @media (max-width: 1400px) {
+        max-width: 350px;
+      }
+
       @media (max-width: 568px) {
         max-width: 300px;
       }
@@ -51,6 +55,10 @@
 
     &-slide {
       min-width: 600px;
+
+      @media (max-width: 1400px) {
+        min-width: 350px;
+      }
 
       @media (max-width: 568px) {
         min-width: 300px;
